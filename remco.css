@@ -1,0 +1,79 @@
+/* Tabs */
+/* Styling */
+.tab {
+    background-color: var(--colorAccentBgAlphaHeavy)!important;
+    width: var(--Width);
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-left: 3px solid transparent !important;
+    transition: border .3s ease-in-out;
+}
+
+/* Make space for close button on right side */
+.tab .title {
+    margin-right: 12px!important;
+}
+
+.alt-tabs .tab:hover.tab:not(.button-off) .favicon {
+    display: block!important;
+}
+
+.tab.active {
+    border-left: 2px solid var(--colorHighlightBg)!important;
+    background-color: var(--colorAccentBgFadedMost)!important;
+}
+
+.tab:not(.pinned):hover .favicon{
+    opacity: 0;
+}
+
+/* Favicon */
+.tab .favicon {
+    margin-right: 4px;
+}
+
+.tab .favicon img{
+    border-radius: 50%;
+}
+
+
+.tab.unread,
+.color-behind-tabs-on .tab.unread  {
+    background-image: none;
+}
+
+.tab.unread:before {
+    position: absolute;
+    content: '';
+    right: 6px;
+    top: 4px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--colorFg);
+    border-radius: 50%;
+}
+
+/* Close button */
+.tab .close {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab:hover .close {
+    opacity: 1;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+
+/* Style QC Modal */
+.qc-modal {
+    border-radius: 16px!important;
+}
+
+/* Window effect for Quick Commands focus */
+.blurred #main {
+    filter: blur(4px) brightness(80%);
+}
